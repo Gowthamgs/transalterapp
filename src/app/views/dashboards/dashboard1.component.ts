@@ -14,6 +14,29 @@ declare var jQuery:any;
 })
 
 export class Dashboard1Component {
+   name:string;
+   showHide:boolean;
+   showtransal:boolean;
+   showwork:boolean;
+  
+  constructor() {
+    this.showHide = false;
+    this.showtransal = false;
+  }
+  
+  changeShoworder(){
+    this.showHide = !this.showHide;
+  }
+
+  changeShowtranslater(){
+    this.showtransal = !this.showtransal;
+  }
+
+  changeShowworklast() {
+    this.showwork = !this.showwork;
+  }
+
+
 
 
   // Dounghunt chart
