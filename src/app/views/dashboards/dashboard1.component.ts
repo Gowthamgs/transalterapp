@@ -14,6 +14,8 @@ declare var jQuery:any;
 })
 
 export class Dashboard1Component {
+
+//Show hide process
    name:string;
    showHide:boolean;
    showtransal:boolean;
@@ -22,21 +24,30 @@ export class Dashboard1Component {
   constructor() {
     this.showHide = false;
     this.showtransal = false;
+    this.showwork = false;
   }
   
   changeShoworder(){
+    this.showtransal = false;
+    this.showwork = false;
     this.showHide = !this.showHide;
   }
 
   changeShowtranslater(){
+     this.showwork = false;
+     this.showHide = false;
     this.showtransal = !this.showtransal;
   }
 
   changeShowworklast() {
+    this.showtransal = false;
+    this.showwork = false;
     this.showwork = !this.showwork;
   }
 
-
+btnClick= function () {
+        this.router.navigateByUrl('/dashboards/dashboard2');
+};
 
 
   // Dounghunt chart

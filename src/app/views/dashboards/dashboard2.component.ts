@@ -11,10 +11,41 @@ declare var jQuery:any;
 
 export class Dashboard2Component implements OnDestroy, OnInit {
 
+
+//Show hide process
+   name:string;
+   showHide:boolean;
+   showtransal:boolean;
+   showwork:boolean;
+  
+  
+  changeShoworder(){
+    this.showtransal = false;
+    this.showwork = false;
+    this.showHide = !this.showHide;
+  }
+
+  changeShowtranslater(){
+     this.showwork = false;
+     this.showHide = false;
+    this.showtransal = !this.showtransal;
+  }
+
+  changeShowworklast() {
+    this.showtransal = false;
+    this.showwork = false;
+    this.showwork = !this.showwork;
+  }
+
+
+
   public nav:any;
   public todos: any;
 
   public constructor() {
+    this.showHide = false;
+    this.showtransal = false;
+    this.showwork = false;
     this.nav = document.querySelector('nav.navbar');
     this.todos = [
       {name: "Buy a milk", completed: true},

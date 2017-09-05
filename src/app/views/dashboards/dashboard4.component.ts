@@ -5,7 +5,8 @@ declare var jQuery:any;
 
 @Component({
   selector: 'dashboard4',
-  templateUrl: 'dashboard4.template.html'
+  templateUrl: 'dashboard4.template.html',
+ styleUrls: ['dashboard4.component.css']
 })
 
 export class Dashboard4Component implements OnDestroy, OnInit {

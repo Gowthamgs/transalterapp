@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     if(username == 'client' && password == 'client')
          this.router.navigate(['/dashboards/dashboard2']);
     else
-    if(username == 'transalater' && password == 'transalater')
+    if(username == 'translator' && password == 'translator')
          this.router.navigate(['/dashboards/dashboard3']);
 
     }

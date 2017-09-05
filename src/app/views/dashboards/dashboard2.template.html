@@ -4,10 +4,10 @@
       <div class="ibox float-e-margins">
         <div class="ibox-title">
           <span class="label label-info pull-right">View</span>
-          <h5>New Assignment</h5>
+          <h5>Order</h5>
         </div>
         <div class="ibox-content">
-          <h1 class="no-margins">5</h1>
+         <a (click)="changeShoworder()"> <h1 class="no-margins">5</h1></a>
                   <small>New Assignment</small>
         </div>
       </div>
@@ -18,7 +18,7 @@
                     <h5>Worklist</h5>
         </div>
         <div class="ibox-content">
-          <h1 class="no-margins">2</h1>
+          <a (click)="changeShowtranslater()"> <h1 class="no-margins">2</h1> </a>
           
           <small>Worklist</small>
         </div>
@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-   <div class="col-lg-12">
+   <div class="col-lg-12" *ngIf="showHide" >
       <div class="ibox float-e-margins">
         <div class="ibox-title">
           <h5>New Assignment</h5>
@@ -72,7 +72,7 @@
         </div>
  
  
-  <div class="col-lg-12">
+  <div class="col-lg-12" *ngIf="showtransal">
       <div class="ibox float-e-margins">
         <div class="ibox-title">
           <h5>Worklist</h5>

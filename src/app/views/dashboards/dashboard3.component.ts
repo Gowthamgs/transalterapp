@@ -9,17 +9,37 @@ declare var jQuery:any;
 })
 
 export class Dashboard3Component implements OnDestroy, OnInit {
+   //Show hide process
+   name:string;
+   showHide:boolean;
+   showtransal:boolean;
+   showwork:boolean;
+   showbox:boolean;
+  
+  changeshowbox(){
+     this.showHide = false;
+     this.showbox = !this.showbox;
+
+  }
+
+  changeShowtranslator(){
+    this.showHide = !this.showHide;
+    
+  }
 
   public nav:any;
   public wrapper:any;
 
   public constructor() {
+    this.showHide = false;
+    this.showtransal = false;
+    this.showwork = false;
     this.nav = document.querySelector('nav.navbar');
     this.wrapper = document.getElementById('page-wrapper');
   }
 
   public ngOnInit():any {
-    this.nav.className += " white-bg";
+        this.nav.className += " white-bg";
     this.wrapper.className += " sidebar-content";
   }
 
